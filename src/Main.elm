@@ -2,7 +2,11 @@ import Browser
 import Html exposing (..)
 import Time
 import Task
+import Svg exposing (svg)
+import Svg.Attributes exposing (..)
+
 import YearClock
+import ClockSvg
 
 
 -- Main
@@ -73,4 +77,5 @@ view model =
   in
   div []
   [ h1 [] [ text ( hour ++ " : " ++ minute ++ " : " ++ second ) ]
+  , ClockSvg.draw 2 yc
   ]
